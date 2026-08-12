@@ -47,7 +47,7 @@ function App() {
   return (
     <>
       <div className="app">
-        <h1>🎮 ELGames</h1>
+        <h1>ELGames</h1>
 
         <p className="subtitle">Catch the Bug!</p>
 
@@ -75,14 +75,15 @@ function App() {
               style={{
                 left: `${position.x}%`,
                 top: `${position.y}%`,
-              }}>
+              }}
+            >
               🐞
             </button>
           )}
 
           {!playing && time === 0 && (
             <div className="gameOver">
-              <h2>GAME OVER 🎮</h2>
+              <h2>GAME OVER! </h2>
               <p>You got</p>
               <h3>{score} Points!</h3>
 
