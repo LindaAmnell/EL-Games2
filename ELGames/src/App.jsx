@@ -41,7 +41,14 @@ function App() {
       setTime(time - 1);
     }, 1000);
 
-    return () => clearTimeout(timer);
+    const bugTimer = setInterval(() => {
+      moveBug();
+    }, 850);
+
+    return () => {
+      clearTimeout(timer);
+      clearInterval(bugTimer);
+    };
   }, [time, playing]);
 
   return (
